@@ -41,6 +41,7 @@ function Register() {
       email,
       password,
       options: {
+        emailRedirectTo: "https://finora-controle.vercel.app/login",
         data: {
           name,
         },

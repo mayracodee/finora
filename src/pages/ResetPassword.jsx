@@ -84,7 +84,7 @@ function ResetPassword() {
             type="button"
             onClick={() => setShowNewPasswordConfirm(!showNewPasswordConfirm)}
           >
-            {showNewPasswordConfirm ? <EyeOff /> : <Eye />}
+            {showNewPasswordConfirm ? <Eye /> : <EyeOff />}
           </button>
         </div>
 

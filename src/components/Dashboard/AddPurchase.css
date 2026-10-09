@@ -47,6 +47,13 @@
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.add-purchase__field input[type="date"] {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
 .add-purchase__field input:focus-visible,
 .add-purchase__field select:focus-visible {
   border-color: var(--color-primary);

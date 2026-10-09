@@ -141,7 +141,7 @@ function Register() {
             type="button"
             onClick={() => setShowConfirmPassword(!showConfirmPassword)}
           >
-            {showConfirmPassword ? <EyeOff /> : <Eye />}
+            {showConfirmPassword ? <Eye /> : <EyeOff />}
           </button>
         </div>
 

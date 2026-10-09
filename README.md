@@ -4,6 +4,8 @@ O **Finora** é uma aplicação web de gestão financeira pessoal desenvolvida p
 
 O projeto foi desenvolvido com foco em organização financeira, visualização de informações e experiência do usuário, com uma interface responsiva para desktop e dispositivos móveis.
 
+Acesse o projeto: https://finora-controle.vercel.app
+
 ## Funcionalidades
 
 - **Autenticação de usuários:** cadastro, login e recuperação de senha.

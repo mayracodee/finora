@@ -1,0 +1,124 @@
+.add-purchase {
+  background-color: var(--color-surface);
+  padding: var(--spacing-xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.add-purchase__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+}
+
+
+.add-purchase__form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+.add-purchase__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  min-width: 0;
+}
+
+.add-purchase__field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.add-purchase__field input,
+.add-purchase__field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-purchase__field input:focus-visible,
+.add-purchase__field select:focus-visible {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.add-purchase__field .form-error {
+  color: var(--color-error);
+  font-size: 0.875rem;
+}
+
+.add-purchase__form-title {
+  grid-column: 1 / -1;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.add-purchase__form button[type="submit"] {
+  grid-column: 1 / -1;
+  min-height: 46px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.add-purchase__form button[type="submit"]:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.add-purchase__form button[type="submit"]:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.add-purchase .form-success {
+  padding: 12px 16px;
+  border: 1px solid var(--color-success);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+  font-size: 0.875rem;
+}
+
+.add-purchase .form-error {
+  color: var(--color-error);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+
+@media (max-width: 640px) {
+  .add-purchase {
+    padding: var(--spacing-md);
+  }
+
+  .add-purchase__form {
+    grid-template-columns: 1fr;
+  }
+
+  .add-purchase__form-title,
+  .add-purchase__form button[type="submit"] {
+    grid-column: 1;
+  }
+}
+
+

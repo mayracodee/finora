@@ -1,0 +1,97 @@
+
+.spending-by-category {
+  margin-top: var(--spacing-lg);
+}
+
+.spending-by-category__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.spending-by-category__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.spending-by-category__month-select {
+  width: 100%;
+  max-width: 320px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.spending-by-category__month-select:focus-visible {
+  outline: 3px solid var(--color-primary-light);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+
+.spending-by-category__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+.spending-by-category__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  min-width: 0;
+  padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.spending-by-category__item h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.spending-by-category__item p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.spending-by-category__item p:nth-of-type(1) {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+
+@media (max-width: 640px) {
+  .spending-by-category__panel {
+    padding: var(--spacing-md);
+  }
+
+  .spending-by-category__list {
+    grid-template-columns: 1fr;
+  }
+
+  .spending-by-category__item {
+    padding: var(--spacing-md);
+  }
+
+  .spending-by-category__month-select {
+    max-width: 100%;
+  }
+}

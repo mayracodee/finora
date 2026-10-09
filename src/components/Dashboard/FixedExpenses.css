@@ -1,0 +1,216 @@
+.fixed-expenses {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.fixed-expenses__title,
+.fixed-expenses__list-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.fixed-expenses__list-title {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.fixed-expenses__form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+.fixed-expenses__form label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.fixed-expenses__form input,
+.fixed-expenses__form select {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+.fixed-expenses__form input:focus-visible,
+.fixed-expenses__form select:focus-visible {
+    outline: 3px solid var(--color-primary-light);
+    border-color: var(--color-primary);
+}
+
+.fixed-expenses__form button[type="submit"] {
+    grid-column: 1 / -1;
+    min-height: 46px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--radius-md);
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.fixed-expenses__form button[type="submit"]:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.fixed-expenses__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    min-width: 0;
+}
+
+
+.fixed-expenses__field label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.fixed-expenses__field input,
+.fixed-expenses__field select {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+.fixed-expenses__panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.fixed-expenses__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+.fixed-expenses__item p {
+    overflow-wrap: anywhere;
+}
+
+.fixed-expenses__item button:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.fixed-expenses__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.fixed-expenses__item p {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+.fixed-expenses__item p:first-child {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+
+.fixed-expenses__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.fixed-expenses__actions button {
+    min-height: 40px;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.fixed-expenses__actions button:first-child {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+.fixed-expenses__actions button:first-child:hover {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.fixed-expenses__actions button:last-child {
+    background-color: var(--color-error-light);
+    color: var(--color-error);
+}
+
+.fixed-expenses__actions button:last-child:hover {
+    background-color: var(--color-error);
+    color: #FFFFFF;
+}
+
+.fixed-expenses__list-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.fixed-expenses>p {
+    padding: 12px 16px;
+    border: 1px solid var(--color-success);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+    font-size: 0.875rem;
+}
+
+
+
+@media (max-width: 640px) {
+    .fixed-expenses__list {
+        grid-template-columns: 1fr;
+    }
+
+    .fixed-expenses__panel {
+        padding: var(--spacing-md);
+    }
+
+    .fixed-expenses__form {
+        grid-template-columns: 1fr;
+    }
+
+    .fixed-expenses__form button[type="submit"] {
+        grid-column: 1;
+    }
+}

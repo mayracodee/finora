@@ -1,0 +1,31 @@
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  padding: 24px 40px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+.welcome {
+  padding: 60px 40px;
+}
+
+.welcome h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #172033;
+  margin-bottom: 12px;
+}
+
+.welcome p {
+  font-size: 18px;
+  color: #64748B;
+}
+

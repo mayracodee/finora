@@ -1,0 +1,196 @@
+
+.cards-section {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.cards-section__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+
+.cards-section__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.cards-section__form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  align-items: start;
+}
+
+.cards-section__form label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.cards-section__form input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.cards-section__form input:focus-visible {
+  outline: 3px solid var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+.cards-section__form button[type="submit"] {
+  grid-column: 1 / -1;
+  min-height: 46px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cards-section__form button[type="submit"]:hover {
+  background-color: var(--color-primary-hover);
+}
+
+
+.cards-section__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  min-width: 0;
+}
+
+.cards-section__field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.cards-section__field input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.cards-section__field input:focus-visible {
+  outline: 3px solid var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-item h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.card-item p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.card-actions button {
+  min-height: 40px;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.card-actions button:first-child {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-color: var(--color-primary-light);
+}
+
+.card-actions button:last-child {
+  background-color: var(--color-error-light);
+  color: var(--color-error);
+  border-color: var(--color-error-light);
+}
+
+.cards-section__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.cards-section__list .card-item {
+  margin-top: 0;
+}
+
+.card-actions button:first-child:hover {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.card-actions button:last-child:hover {
+  background-color: var(--color-error);
+  color: #FFFFFF;
+}
+
+
+
+@media (max-width: 768px) {
+  .cards-section__panel {
+    padding: var(--spacing-md);
+  }
+
+  .cards-section__form {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-section__form button[type="submit"] {
+    grid-column: 1;
+  }
+
+  .cards-section__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
